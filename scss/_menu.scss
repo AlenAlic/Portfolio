@@ -87,8 +87,10 @@
     }
 
     .portrait {
-      width: 250px;
-      height: 250px;
+      width: 20vw;
+      height: 20vw;
+      max-width: 200px;
+      max-height: 200px;
       background: url("../img/portrait.jpg");
       border-radius: 50%;
       border: solid 3px $secondary-color;
