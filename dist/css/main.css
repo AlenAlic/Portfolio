@@ -1,8 +1,8 @@
 .menu-btn {
   position: absolute;
   z-index: 3;
-  right: 32px;
-  top: 32px;
+  right: 24px;
+  top: 24px;
   cursor: pointer;
   transition: all 0.25s ease-out; }
   .menu-btn .btn-line {
@@ -149,13 +149,14 @@ a {
   color: white;
   text-decoration: none; }
 
+a.underlined {
+  text-decoration: underline; }
+
 header {
   position: fixed;
   z-index: 2;
   width: 100%;
-  height: 72px;
-  background: #000d19;
-  box-shadow: 0 1px 6px white; }
+  height: 72px; }
 
 .text-secondary {
   color: #1e83f0; }
@@ -179,17 +180,20 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio" "job0 job1 job2" "job3 . .";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
-    width: 240px;
+    width: 220px;
+    max-width: 50vw;
     margin: auto;
     border-radius: 50%;
     border: #1e83f0 3px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
+  .about-info .job-0 {
+    grid-area: job0; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
@@ -282,7 +286,7 @@ main {
   .projects {
     grid-template-columns: repeat(3, 1fr); }
   .about-info {
-    grid-template-areas: "bioimage bio" "job1 job2" "job3 job4";
+    grid-template-areas: "bioimage bio" "job0 job1" "job2 job3";
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 768px) {
@@ -317,19 +321,19 @@ main {
       max-height: 100px;
       background-size: contain; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-areas: "bioimage" "bio" "job0" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main {
-    padding: 2rem; }
+    padding: 4rem; }
     main #home h1 {
       margin-top: 10vh; }
     main .lg-heading {
       margin-top: 1rem;
-      font-size: 3rem; }
+      font-size: 2.5rem; }
   .projects {
     grid-template-columns: 1fr; }
   .boxes div {
@@ -337,3 +341,10 @@ main {
     border: 3px #fff solid;
     padding: 1rem 1.5rem;
     margin-bottom: 2rem; } }
+
+@media screen and (max-width: 350px) {
+  body {
+    font-size: 13px; }
+  main .lg-heading {
+    margin-top: 1rem;
+    font-size: 2rem; } }
