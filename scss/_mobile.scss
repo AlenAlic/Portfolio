@@ -9,13 +9,13 @@
 // Desktops & Laptops
 @include mediaLg {
   .projects {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .about-info {
     grid-template-areas:
       "bioimage bio"
-      "job0 job1"
-      "job2 job3";
+      "job1 job2"
+      "job3 .";
 
     grid-template-columns: repeat(2, 1fr);
   }
@@ -76,17 +76,26 @@
       "job3";
 
     grid-template-columns: 1fr;
+
+    .job {
+      align-items: left;
+      text-align: left;
+    }
   }
 
   .projects {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    .item {
+      align-items: left;
+      text-align: left;
+    }
   }
 }
 
 // Smartphones
 @include mediaSm {
   main {
-    padding: 4rem;
+    // padding: 4rem;
     #home h1 {
       margin-top: 10vh;
     }
@@ -103,7 +112,7 @@
 
   .boxes {
     div {
-      font-size: 1.2rem;
+      font-size: 0.85rem;
       border: 3px #fff solid;
       padding: 1rem 1.5rem;
       margin-bottom: 2rem;
@@ -111,10 +120,13 @@
   }
 }
 
-// Smartphones
+// Small Smartphones
 @include mediaXs {
   body {
     font-size: 13px;
+  }
+  ul {
+    padding-inline-start: 20px;
   }
   main {
     .lg-heading {

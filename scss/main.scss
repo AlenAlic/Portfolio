@@ -16,7 +16,7 @@ body {
 }
 
 main {
-  padding-top: 72px !important;
+  padding-top: $header-height !important;
 }
 
 h1,
@@ -54,33 +54,52 @@ a.underlined {
   text-decoration: underline;
 }
 
+ul {
+  padding-inline-start: 30px;
+}
+
 header {
   position: fixed;
   z-index: 2;
   width: 100%;
-  height: 72px;
+  height: $header-height;
 }
 
-// .top-bar {
-//   @include mediaSm {
-//     background: darken($primary-color, 2);
-//     box-shadow: 0 1px 6px white;
-//   }
-// }
+footer {
+  background: lighten($primary-color, 5);
+  height: $header-height/2;
+  width: 100%;
+  display: grid;
+
+  div {
+    margin: auto;
+    a {
+      margin: 0 1.5rem;
+      @include easeOut;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
 
 .text-secondary {
   color: $secondary-color;
 }
 
 main {
-  padding: 4rem;
-  min-height: calc(100vh - 72px);
+  padding: 4rem 4rem 2rem 4rem;
+  min-height: calc(100vh - 108px);
 
   .icons {
     margin-top: 1rem;
 
     a {
-      padding: 0.4rem;
+      padding: 0.8rem;
+      &:first-child {
+        padding: 0.8rem 0.8rem 0.8rem 0;
+      }
       @include easeOut;
 
       &:hover {
@@ -103,8 +122,7 @@ main {
   grid-gap: 30px;
   grid-template-areas:
     "bioimage bio bio"
-    "job0 job1 job2"
-    "job3 . .";
+    "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
@@ -118,7 +136,7 @@ main {
 
   .bio {
     grid-area: bio;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .job-0 {
