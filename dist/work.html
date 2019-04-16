@@ -57,13 +57,20 @@
       <div class="projects">
 
         <div class="item">
-          <a href="#!">
-            <img
+          <span>
+            <img 
+              data-target="modal-dance"
+              class="project-link modal-btn"
               src="img/projects/adjudication_system.png"
-              alt="Jurering systeem"
+              alt="DANCE-systeem"
             />
-          </a>
-          <span href="#" class="span-light">
+          </span>
+          <div id="modal-dance" class="modal">
+            <span class="modal-close">&times;</span>
+            <img class="modal-content">
+            <span class="modal-caption"></span>
+          </div>
+          <span class="span-light">
             <span class="title">DANCE-systeem</span>
             Een web based systeem om een stijldanstoernooi toernooi te jureren.
             Het systeem wordt momenteel gebruikt door alle grotere studenten
@@ -85,14 +92,21 @@
         </div>
 
         <div class="item">
-          <a href="#!">
+          <span>
             <img
+              data-target="modal-dashboard"
+              class="project-link modal-btn"
               src="img/projects/wp_dashboard.png"
               alt="Wansink & Partner Dashboard"
             />
-          </a>
-          <span href="#" class="span-light">
-            <span class="title">Automatisering Dashboard</span>
+          </span>
+          <div id="modal-dashboard" class="modal">
+              <span class="modal-close">&times;</span>
+              <img class="modal-content">
+              <span class="modal-caption"></span>
+            </div>
+          <span class="span-light">
+            <span class="title">Wansink & Partner Dashboard</span>
             <a href="https://www.wansink-partner.nl/" target="_blank"
               >Wansink & Partner</a
             >
@@ -122,10 +136,20 @@
         </div>
 
         <div class="item">
-          <a href="#!">
-            <img src="img/projects/xtds_webportal.png" alt="xTDS WebPortal" />
-          </a>
-          <span href="#" class="span-light">
+          <span>
+            <img 
+              data-target="modal-xtds"
+              class="project-link modal-btn" 
+              src="img/projects/xtds_webportal.png" 
+              alt="xTDS WebPortal"
+            />
+          </span>
+          <div id="modal-xtds" class="modal">
+              <span class="modal-close">&times;</span>
+              <img class="modal-content">
+              <span class="modal-caption"></span>
+            </div>
+          <span class="span-light">
             <span class="title">xTDS WebPortal</span>
             Een web portal dat gebruikt wordt voor de organisatie van een groot
             terugkerend stijldanstoernooi (400-700 deelnemers).

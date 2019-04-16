@@ -1,8 +1,10 @@
 @import "config";
 @import "menu";
+@import "modal";
 
 * {
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 body {
