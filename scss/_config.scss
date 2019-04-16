@@ -1,7 +1,7 @@
 $primary-color: #001223;
 $secondary-color: #1e83f0;
 $show-home-image: true;
-$home-image: url(../img/background.jpg);
+$home-image: url(../img/background_small.jpg);
 $background-opacity: 0.8;
 $header-height: 72px;
 
@@ -12,8 +12,13 @@ $header-height: 72px;
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-      background: $home-image;
-      background-attachment: fixed;
+      // background: $home-image;
+      // background-attachment: fixed;
+      // background-size: cover;
+      background: $home-image no-repeat left top fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
       background-size: cover;
 
       &:after {
@@ -66,6 +71,13 @@ $header-height: 72px;
 
 @mixin mediaXl {
   @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
+
+// Landscape
+@mixin mediaLandscapeSm {
+  @media screen and (orientation: landscape) and (max-height: 500px) {
     @content;
   }
 }

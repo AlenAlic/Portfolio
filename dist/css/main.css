@@ -80,6 +80,10 @@
     transition: all 0.25s ease-out; }
     .menu .nav-link:hover {
       color: #1e83f0; }
+  @media screen and (orientation: landscape) and (max-height: 500px) {
+    .menu .nav-link {
+      font-size: 20px;
+      padding: 0.5rem 0; } }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.05s; }
@@ -180,8 +184,10 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.3; }
   body#bg-img {
-    background: url(../img/background.jpg);
-    background-attachment: fixed;
+    background: url(../img/background_small.jpg) no-repeat left top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover; }
     body#bg-img:after {
       content: "";
@@ -209,9 +215,13 @@ h3 {
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     padding: 0.2rem 0;
     background: rgba(0, 23, 45, 0.5); }
+    h1.sm-heading.clear,
+    h2.sm-heading.clear,
+    h3.sm-heading.clear {
+      background: none; }
   h1.no-transform,
   h2.no-transform,
   h3.no-transform {
@@ -224,9 +234,8 @@ h6 {
 a {
   color: white;
   text-decoration: none; }
-
-a.underlined {
-  text-decoration: underline; }
+  a.underlined {
+    text-decoration: underline; }
 
 ul {
   padding-inline-start: 30px; }
@@ -257,7 +266,8 @@ main {
   padding: 4rem 4rem 2rem 4rem;
   min-height: calc(100vh - 108px); }
   main .icons {
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    font-size: 1.7rem; }
     main .icons a {
       padding: 0.8rem;
       transition: all 0.25s ease-out; }
@@ -285,7 +295,7 @@ main {
     border: #1e83f0 3px solid; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.2rem; }
+    font-size: 1.3rem; }
   .about-info .job-0 {
     grid-area: job0; }
   .about-info .job-1 {
@@ -324,7 +334,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem; }
+  margin-top: 8rem; }
   .boxes div {
     font-size: 1.5rem;
     border: 3px #fff solid;
@@ -417,6 +427,9 @@ main {
   .about-info {
     grid-template-areas: "bioimage" "bio" "job0" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
+    .about-info .bio {
+      grid-area: bio;
+      font-size: 1.1rem; }
     .about-info .job {
       align-items: left;
       text-align: left; }
@@ -434,17 +447,41 @@ main {
     font-size: 2.5rem; }
   .projects {
     grid-template-columns: 1fr; }
-  .boxes div {
-    font-size: 0.85rem;
-    border: 3px #fff solid;
-    padding: 1rem 1.5rem;
-    margin-bottom: 2rem; } }
+  .boxes {
+    margin-top: 2rem; }
+    .boxes div {
+      font-size: 0.85rem;
+      border: 3px #fff solid;
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem; } }
 
 @media screen and (max-width: 350px) {
   body {
     font-size: 13px; }
   ul {
     padding-inline-start: 20px; }
-  main .lg-heading {
-    margin-top: 1rem;
-    font-size: 2rem; } }
+  main {
+    padding: 4rem 4rem 2rem 4rem; }
+    main .icons {
+      font-size: 1rem; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 2rem; } }
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  h1.lg-heading,
+  h2.lg-heading {
+    font-size: 3rem; }
+  h1.sm-heading,
+  h2.sm-heading {
+    font-size: 1.5rem; }
+  main {
+    padding-top: 16vh !important; }
+    main .icons {
+      font-size: 1.5rem; }
+    main#home h1 {
+      margin-top: 5vh; }
+  .boxes {
+    margin-top: 1rem; }
+    .boxes div {
+      font-size: 1.2rem; } }

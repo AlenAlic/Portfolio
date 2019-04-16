@@ -1,3 +1,5 @@
+@import "config";
+
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -23,12 +25,10 @@
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
       }
-
       // Line 2 - Hide
       &:nth-child(2) {
         opacity: 0;
       }
-
       // Line 3 - Rotate
       &:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
@@ -125,6 +125,12 @@
 
     &:hover {
       color: $secondary-color;
+    }
+  }
+  @include mediaLandscapeSm {
+    .nav-link {
+      font-size: 20px;
+      padding: 0.5rem 0;
     }
   }
 }

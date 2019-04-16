@@ -32,9 +32,13 @@ h3 {
     font-size: 6rem;
   }
   &.sm-heading {
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     padding: 0.2rem 0;
     background: rgba(lighten($primary-color, 2), 0.5);
+
+    &.clear {
+      background: none;
+    }
   }
 
   &.no-transform {
@@ -50,10 +54,9 @@ h6 {
 a {
   color: white;
   text-decoration: none;
-}
-
-a.underlined {
-  text-decoration: underline;
+  &.underlined {
+    text-decoration: underline;
+  }
 }
 
 ul {
@@ -96,6 +99,7 @@ main {
 
   .icons {
     margin-top: 1rem;
+    font-size: 1.7rem;
 
     a {
       padding: 0.8rem;
@@ -138,7 +142,7 @@ main {
 
   .bio {
     grid-area: bio;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .job-0 {
@@ -197,7 +201,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 8rem;
 
   div {
     font-size: 1.5rem;
