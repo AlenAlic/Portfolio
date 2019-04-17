@@ -7,11 +7,9 @@
   -webkit-box-sizing: border-box;
 }
 
-html {
-  @include background;
-}
 body {
-  // background: $primary-color;
+  @include background;
+  background: $primary-color;
   color: white;
   height: 100%;
   margin: 0;

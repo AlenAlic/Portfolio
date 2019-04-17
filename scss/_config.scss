@@ -12,16 +12,11 @@ $header-height: 72px;
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-      // background: $home-image;
-      // background-attachment: fixed;
-      // background-size: cover;
-      // @media screen and (max-width: 600px) {
-      //   background-attachment: scroll;
-      // }
-      background: $home-image no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
+      background: $home-image;
+      @media screen and (orientation: portrait) {
+        background: url(../img/background_small_portrait.jpg);
+      }
+      background-attachment: fixed;
       background-size: cover;
 
       &:after {
