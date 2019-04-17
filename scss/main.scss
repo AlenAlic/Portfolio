@@ -7,9 +7,11 @@
   -webkit-box-sizing: border-box;
 }
 
-body {
+html {
   @include background;
-  background: $primary-color;
+}
+body {
+  // background: $primary-color;
   color: white;
   height: 100%;
   margin: 0;
@@ -94,7 +96,7 @@ footer {
 }
 
 main {
-  padding: 4rem 4rem 2rem 4rem;
+  padding: 4rem 4rem 4rem 4rem;
   min-height: calc(100vh - 108px);
 
   .icons {
