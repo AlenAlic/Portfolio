@@ -16,6 +16,20 @@
     @include easeOut;
   }
 
+  @include mediaSm {
+    .circle {
+      z-index: -1;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      right: -6px;
+      top: -10px;
+      background: $primary-color;
+      border-radius: 50%;
+      box-shadow: 0 0 8px 2px white;
+    }
+  }
+
   // Rotate Into X With Menu Lines
   &.close {
     transform: rotate(180deg);
@@ -23,7 +37,7 @@
     .btn-line {
       // Line 1 - Rotate
       &:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(6px, 6px);
       }
       // Line 2 - Hide
       &:nth-child(2) {
@@ -31,7 +45,7 @@
       }
       // Line 3 - Rotate
       &:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+        transform: rotate(-45deg) translate(6px, -5px);
       }
     }
   }

@@ -11,14 +11,25 @@
     margin: 0 0 5px 0;
     background: #fff;
     transition: all 0.25s ease-out; }
+  @media screen and (max-width: 500px) {
+    .menu-btn .circle {
+      z-index: -1;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      right: -6px;
+      top: -10px;
+      background: #001223;
+      border-radius: 50%;
+      box-shadow: 0 0 8px 2px white; } }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px); }
+      transform: rotate(45deg) translate(6px, 6px); }
     .menu-btn.close .btn-line:nth-child(2) {
       opacity: 0; }
     .menu-btn.close .btn-line:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -6px); }
+      transform: rotate(-45deg) translate(6px, -5px); }
 
 .menu {
   position: fixed;
