@@ -15,7 +15,10 @@ $header-height: 72px;
       // background: $home-image;
       // background-attachment: fixed;
       // background-size: cover;
-      background: $home-image no-repeat left top fixed;
+      // @media screen and (max-width: 600px) {
+      //   background-attachment: scroll;
+      // }
+      background: $home-image no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
