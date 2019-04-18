@@ -72,9 +72,10 @@ header {
 
 footer {
   background: lighten($primary-color, 5);
-  height: $header-height/2;
+  height: $header-height;
   width: 100%;
   display: grid;
+  font-size: 1.5rem;
 
   div {
     margin: auto;
