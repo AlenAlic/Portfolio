@@ -5,6 +5,9 @@ $home-image: url(../img/background_small.jpg);
 $background-opacity: 0.8;
 $header-height: 72px;
 
+$contact-size: 16rem;
+$contact-font-size: 8rem;
+
 @mixin easeOut {
   transition: all 0.25s ease-out;
 }

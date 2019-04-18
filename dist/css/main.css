@@ -21,7 +21,7 @@
       top: -10px;
       background: #001223;
       border-radius: 50%;
-      box-shadow: 0 0 8px 2px white; } }
+      box-shadow: 0 1px 8px 2px white; } }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -366,6 +366,40 @@ main {
       transition: all 0.25s ease-out;
       color: #1e83f0; }
 
+.contact-boxes {
+  display: grid;
+  grid-gap: auto;
+  grid-template-columns: repeat(3, 1fr); }
+  .contact-boxes .item {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+    font-size: 1.4rem;
+    flex-wrap: wrap;
+    max-width: 16rem;
+    margin-top: 4rem; }
+    .contact-boxes .item:hover .circle {
+      transition: all 0.25s ease-out;
+      background: #1e83f0; }
+    .contact-boxes .item i {
+      font-size: 8rem; }
+    .contact-boxes .item .circle {
+      z-index: -1;
+      position: relative;
+      width: 16rem;
+      height: 16rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: -12rem;
+      background: #001f3d;
+      border: 3px #fff solid;
+      border-radius: 50%; }
+    .contact-boxes .item .title {
+      display: block;
+      margin-top: 5rem;
+      text-transform: uppercase; }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
@@ -404,7 +438,29 @@ main {
     grid-template-columns: repeat(2, 1fr); }
   .about-info {
     grid-template-areas: "bioimage bio" "job1 job2" "job3 .";
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .contact-boxes .item {
+    font-size: 1.2rem;
+    margin-top: 3rem; }
+    .contact-boxes .item:hover .circle {
+      transition: all 0.25s ease-out;
+      background: #1e83f0; }
+    .contact-boxes .item i {
+      font-size: 6rem; }
+    .contact-boxes .item .circle {
+      z-index: -1;
+      position: relative;
+      width: 12rem;
+      height: 12rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: -9rem;
+      background: #001f3d;
+      border: 3px #fff solid;
+      border-radius: 50%; }
+    .contact-boxes .item .title {
+      display: block;
+      margin-top: 4rem; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -455,7 +511,35 @@ main {
     grid-template-columns: repeat(1, 1fr); }
     .projects .item {
       align-items: left;
-      text-align: left; } }
+      text-align: left; }
+  .contact-boxes {
+    grid-template-columns: repeat(1, 1fr); }
+    .contact-boxes .item {
+      font-size: 1rem;
+      max-width: 80vw;
+      margin-top: 1.5rem; }
+      .contact-boxes .item a {
+        display: grid;
+        grid-gap: auto;
+        grid-template-columns: auto auto;
+        justify-items: center;
+        border: 3px #fff solid;
+        border-radius: 5px;
+        margin: 0.5rem;
+        padding: 1rem 1rem;
+        background: #001f3d; }
+      .contact-boxes .item:hover a {
+        transition: all 0.25s ease-out;
+        background: #1e83f0; }
+      .contact-boxes .item i {
+        font-size: 2rem;
+        margin-right: 1rem; }
+      .contact-boxes .item .circle,
+      .contact-boxes .item .title {
+        display: none; }
+      .contact-boxes .item span {
+        display: inline-block;
+        align-self: center; } }
 
 @media screen and (max-width: 500px) {
   main {
@@ -468,12 +552,10 @@ main {
   .projects {
     grid-template-columns: 1fr; }
   .boxes {
-    margin-top: 2rem; }
+    margin-top: 4.5rem; }
     .boxes div {
-      font-size: 0.85rem;
-      border: 3px #fff solid;
-      padding: 1rem 1.5rem;
-      margin-bottom: 2rem; } }
+      font-size: 1.3rem;
+      margin-bottom: 2.5rem; } }
 
 @media screen and (max-width: 350px) {
   body {
@@ -484,7 +566,13 @@ main {
     font-size: 1rem; }
   main .lg-heading {
     margin-top: 1rem;
-    font-size: 2rem; } }
+    font-size: 2rem; }
+  .boxes {
+    margin-top: 3rem; }
+    .boxes div {
+      font-size: 0.85rem;
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem; } }
 
 @media screen and (orientation: landscape) and (max-height: 500px) {
   h1.lg-heading,

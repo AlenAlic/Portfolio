@@ -229,6 +229,56 @@ main {
   }
 }
 
+.contact-boxes {
+  display: grid;
+  grid-gap: auto;
+  grid-template-columns: repeat(3, 1fr);
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+    font-size: 1.4rem;
+    flex-wrap: wrap;
+    max-width: $contact-size;
+    margin-top: 4rem;
+
+    // a {
+    //   border: 3px #fff solid;
+    //   border-radius: 5px;
+    // }
+
+    &:hover {
+      .circle {
+        @include easeOut;
+        background: $secondary-color;
+      }
+    }
+
+    i {
+      font-size: $contact-font-size;
+    }
+    .circle {
+      z-index: -1;
+      position: relative;
+      width: $contact-size;
+      height: $contact-size;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: -$contact-size/2 -$contact-font-size/2;
+      background: lighten($primary-color, 5);
+      border: 3px #fff solid;
+      border-radius: 50%;
+    }
+    .title {
+      display: block;
+      margin-top: $contact-font-size/2 + 1rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
 .btn {
   display: block;
   padding: 0.5rem 1rem;
