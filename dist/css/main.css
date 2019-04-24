@@ -275,9 +275,12 @@ footer {
 .text-secondary {
   color: #1e83f0; }
 
+.resume {
+  font-weight: 600; }
+
 main {
   padding: 4rem 4rem 4rem 4rem;
-  min-height: calc(100vh - 108px); }
+  min-height: calc(100vh - 72px); }
   main .icons {
     margin-top: 1rem;
     font-size: 1.7rem; }
@@ -290,6 +293,7 @@ main {
         color: #1e83f0; }
   main#home {
     overflow: hidden;
+    min-height: 100vh;
     padding-left: 10vw; }
     main#home h1 {
       margin-top: 20vh; }
