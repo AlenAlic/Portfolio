@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-website = alenalic.nl
+website=alenalic.nl
 
 
 echo "Starting installation"
@@ -13,12 +13,8 @@ sudo apt -y upgrade
 echo "System updated================================"
 
 echo "Installing base dependencies=================="
-sudo apt -y install supervisor nginx git
+sudo apt -y install supervisor nginx
 echo "Base dependencies installed==================="
-
-echo "Downloading from Github======================="
-git clone https://github.com/AlenAlic/Portfolio
-echo "Downloading complete=========================="
 
 
 echo "Installing SSL certificate===================="
@@ -48,11 +44,11 @@ server {
     index index.html;
 	
 	location / {
-		try_files $uri $uri/ =404;
+		try_files \$uri \$uri/ =404;
 	}
 
-    access_log /var/log/$website_access.log;
-    error_log /var/log/$website_error.log;
+    access_log /var/log/$website.access.log;
+    error_log /var/log/$website.error.log;
 
     ssl_certificate /etc/letsencrypt/live/$website/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/$website/privkey.pem;

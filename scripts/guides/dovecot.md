@@ -52,6 +52,8 @@ Uncomment
     !include auth-system.conf.ext
     !include auth-sql.conf.ext
 
+Save changes
+
 # /etc/dovecot/conf.d/auth-sql.conf.ext
 
     sudo nano /etc/dovecot/conf.d/auth-sql.conf.ext

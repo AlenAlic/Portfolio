@@ -2,7 +2,14 @@
 
 \*For now only in Dutch
 
-Scripts and guides to install the site and email can be found in the '/scripts' folder.
+## Installation
+
+Install git and clone the repository.
+
+    sudo apt -y install git
+    git clone https://github.com/AlenAlic/Portfolio
+
+Run the scripts from the `/scripts` folder.
 
 ## Scripts/Guides in order
 
