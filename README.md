@@ -1,8 +1,8 @@
-#My personal web portfolio\*.
+# My personal web portfolio\*.
 
 \*For now only in Dutch
 
-Scripts and guides to install the site and email can be found in tthe '/scripts' folder.
+Scripts and guides to install the site and email can be found in the '/scripts' folder.
 
 ## Scripts/Guides in order
 
