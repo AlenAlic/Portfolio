@@ -54,8 +54,8 @@ server {
     access_log /var/log/$website_access.log;
     error_log /var/log/$website_error.log;
 
-    ssl_certificate /etc/letsencrypt/live/*.$website/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/*.$website/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/$website/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/$website/privkey.pem;
     include /etc/letsencrypt/options-ssl-nginx.conf;
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
     ssl_ecdh_curve secp521r1:secp384r1:prime256v1;
